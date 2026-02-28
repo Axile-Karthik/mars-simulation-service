@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: simulationservice
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    consumer:
+      group-id: mars-sim-group-v1
+      auto-offset-reset: earliest
+      player-topic-name: mars.player.move
+
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+    listener:
+      ack-mode: record
