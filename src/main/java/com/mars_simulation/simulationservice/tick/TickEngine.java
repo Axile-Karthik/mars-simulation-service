@@ -22,6 +22,7 @@ public class TickEngine {
     private void runTick(){
 
         worldState.setTick(worldState.getTick()+1);
+
         worldState.setWorldTime(LocalDateTime.now());
 
         EnvironmentComponent environment = worldState.getEnvironment();
